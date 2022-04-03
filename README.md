@@ -12,14 +12,14 @@ The model (built on top of vgg16 model using Tensorflow Keras module) is trained
 ### Background images ###
 1) The background images dataset is obtained by a combination of (i) web scrapping from Unsplash, (ii) Manually selecting from Unsplash and (iii) Taking the image personally with webcam  
     a. High resolution images scrapped from Unplash (with the keyword and num. of images below)  
-      i. Background office - 200  
-      ii. Colour - 200  
-      iii. Fashion - 1000  
-      iv. Female - 200  
-      v. Indoor - 200  
-      vi. Kids - 200  
-      vii. Male - 200  
-      viii. People - 1000  
+        i. Background office - 200  
+        ii. Colour - 200  
+        iii. Fashion - 1000  
+        iv. Female - 200  
+        v. Indoor - 200  
+        vi. Kids - 200  
+        vii. Male - 200  
+        viii. People - 1000  
       
     b. High resolution images manually selected from Unsplaash (with the keyword and num. of images below)  
       i. Cluttered - 30  
@@ -57,3 +57,4 @@ NOTE: Images with no handsign present do not affect classification accuracy and 
 ![image](https://user-images.githubusercontent.com/81301185/161440848-b33af7ab-0055-4ab7-af21-089c8adb0188.png)
 - As expected, the model performs worse when tested with real images as compared to the synthetic images, especially in terms of its classification accuracy. IoU is still pretty decent even when tested with the real images.
 - As compared to similar model but trained on just the real images, the model trained on synthetic data performs much better, especially in real-time prediction, possibly due to the larger dataset of greater variation of images as well as minimial overfitting.
+- The project is carried out with the objectives of exploring and learning image processing, computer vision techniques as well as systems involving neural networks. The code is more of a combination of notes and thoughts instead of being representable. Although efforts have been made to fine-tune the model and to introduce variety in the image dataset such that they resemble an actual real-life images more closely, the image dataset may not be the best representation of an actual images of hand sign.
