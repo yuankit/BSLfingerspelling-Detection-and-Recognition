@@ -7,11 +7,11 @@ The model (built on top of vgg16 model using Tensorflow Keras module) is trained
     a. Orientation
     b. brightness
     c. Background
-2) The images are segmented with GrabCut Algorithm
+2) The images are segmented with [GrabCut Algorithm](https://github.com/imseeom/Hand-Segmentation-with-GrabCut-Algo). 
 
 ### Background images ###
 1) The background images dataset is obtained by a combination of (i) web scrapping from Unsplash, (ii) Manually selecting from Unsplash and (iii) Taking the image personally with webcam  
-    a. High resolution images scrapped from Unplash (with the keyword and num. of images below)  
+    a. High resolution images scrapped from Unplash (with the keyword and num. of images below). Details can be found in [this repository](https://github.com/imseeom/Image-Scrapping-Unsplash)  
         i. Background office - 200  
         ii. Colour - 200  
         iii. Fashion - 1000  
