@@ -3,10 +3,11 @@ The model (built on top of vgg16 model using Tensorflow Keras module) is trained
 
 ## Preprocessing of images ##
 ### Hand sign images ###
-1) At least 25 images of an alphabet fingerspelling sign are taken with phone (in high resolution, at least 1000 x 1000). Images are taken with the following consideration:
-    a. Orientation
-    b. brightness
-    c. Background
+1) At least 25 images of an alphabet fingerspelling sign are taken with phone (in high resolution, at least 1000 x 1000). Images are taken with the following consideration:  
+    a. Orientation  
+    b. Brightness  
+    c. Background  
+2) A total of 720 fingerspelling images are taken, 684 (95%) for training set, 36 (5%) for testing set.  
 2) The images are segmented with [GrabCut Algorithm](https://github.com/imseeom/Hand-Segmentation-with-GrabCut-Algo). 
 
 ### Background images ###
@@ -28,7 +29,7 @@ The model (built on top of vgg16 model using Tensorflow Keras module) is trained
       iv. Random places - 40  
     c. Personally taking them with webcam  
       i. 82 images  
-2) A total of 3422 background images, 3250 (95%) for training set, 172 (5%) for validation set
+2) A total of 3422 background images, 3250 (95%) for training set, 172 (5%) for testing set
 3) Background images are median blurred and resized to 350 x 350 (Larger than the model input and output image size of 300 x 300, to allow greater variation of background images when cropped later)
 
 ### Synthetic image generator ###
@@ -53,8 +54,8 @@ Example:
 ## Results ##
 ![image](https://user-images.githubusercontent.com/81301185/161439361-ffad6253-2711-4cce-b9eb-44db056afb0b.png)
 NOTE: Images with no handsign present do not affect classification accuracy and IoU metrics during the training and validating process. Only the detection/presence accuracy is affected.
-![image](https://user-images.githubusercontent.com/81301185/161441000-d9ccf4d7-f6bb-45fb-85d6-d0bbe8315bc7.png)
-![image](https://user-images.githubusercontent.com/81301185/161440848-b33af7ab-0055-4ab7-af21-089c8adb0188.png)
+![image](https://user-images.githubusercontent.com/81301185/161462007-65145180-8fc6-42ad-a91e-5b6cad4453d3.png)
+![image](https://user-images.githubusercontent.com/81301185/161462031-5049b16e-7bde-4a3a-90f7-511316c81d69.png)
 - As expected, the model performs worse when tested with real images as compared to the synthetic images, especially in terms of its classification accuracy. IoU is still pretty decent even when tested with the real images.
 - As compared to similar model but trained on just the real images, the model trained on synthetic data performs much better, especially in real-time prediction, possibly due to the larger dataset of greater variation of images as well as minimial overfitting.
 - The project is carried out with the objectives of exploring and learning image processing, computer vision techniques as well as systems involving neural networks. The code is more of a combination of notes and thoughts instead of being representable. Although efforts have been made to fine-tune the model and to introduce variety in the image dataset such that they resemble an actual real-life images more closely, the image dataset may not be the best representation of an actual images of hand sign.
